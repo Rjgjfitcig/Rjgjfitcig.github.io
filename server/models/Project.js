@@ -1,25 +1,24 @@
 const mongoose = require('mongoose');
 
 const projectSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    jobRole: { type: String, required: true },
-    skillLevel: {
-        type: String,
-        enum: ['beginner', 'intermediate', 'advanced'],
-        required: true
-    },
+    title: String,
+    description: String,
+    jobRole: String,
+    skillLevel: String,
     requiredSkills: [String],
+    totalXP: Number,
+    estimatedDuration: Number,
     milestones: [{
         title: String,
+        description: String,
+        requiredXP: Number,
         tasks: [{
+            title: String,
             description: String,
             timeLimit: Number,
             xpReward: Number
         }]
-    }],
-    totalXP: Number,
-    estimatedDuration: Number
+    }]
 });
 
-module.exports = mongoose.model('Project', projectSchema);
+module.exports = mongoose.model('Project', projectSchema, 'projects');

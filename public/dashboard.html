@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Job Simulation Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Job Simulation Platform</div>
+        <div class="nav-links">
+            <a href="/">Projects</a>
+            <a href="/dashboard" class="active">Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="dashboard-header">
+            <h1>Your Progress</h1>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total XP</h3>
+                    <p class="stat-value">2,450</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Projects Completed</h3>
+                    <p class="stat-value">3</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Current Level</h3>
+                    <p class="stat-value">Intermediate</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="active-projects">
+            <h2>Active Projects</h2>
+            <div id="active-projects-grid" class="projects-grid">
+                <!-- Active projects will be loaded here -->
+            </div>
+        </section>
+
+        <section class="completed-projects">
+            <h2>Completed Projects</h2>
+            <div id="completed-projects-grid" class="projects-grid">
+                <!-- Completed projects will be loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

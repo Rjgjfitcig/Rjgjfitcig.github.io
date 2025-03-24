@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - Job Simulation Platform</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/project-details.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Job Simulation Platform</div>
+        <div class="nav-links">
+            <a href="/">Projects</a>
+            <a href="/dashboard">Dashboard</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div id="project-details" class="project-header">
+            <!-- Project details will be loaded here -->
+        </div>
+
+        <div id="milestones-container" class="project-content">
+            <!-- Milestones will be loaded here -->
+        </div>
+        
+        <section class="submission-section">
+            <h2>Project Submission</h2>
+            <form id="submission-form">
+                <div class="form-group">
+                    <label for="notes" class="form-label">Project Notes</label>
+                    <textarea id="notes" class="form-input form-textarea" 
+                        placeholder="Enter your project notes or submission details"></textarea>
+                </div>
+                <div class="file-input-wrapper">
+                    <label class="file-input-label">
+                        Choose Files
+                        <input type="file" class="file-input" multiple>
+                    </label>
+                    <div id="selected-files" class="selected-files"></div>
+                </div>
+                <button type="submit" class="submit-btn">Submit Project</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/project-details.js"></script>
+</body>
+</html>
